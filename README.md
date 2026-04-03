@@ -4,6 +4,22 @@ A backend system for a finance dashboard that supports financial record manageme
 
 ---
 
+## Live API
+
+Base URL: `https://zorvyn-backend-production-7830.up.railway.app`
+
+Test it:
+```
+GET https://zorvyn-backend-production-7830.up.railway.app/
+```
+
+Returns:
+```json
+{ "message": "Zorvyn Finance API is running" }
+```
+
+---
+
 ## Tech Stack
 
 - **Runtime**: Node.js
@@ -12,6 +28,7 @@ A backend system for a finance dashboard that supports financial record manageme
 - **Authentication**: JWT (JSON Web Tokens)
 - **Password Hashing**: bcryptjs
 - **Validation**: express-validator
+- **Deployment**: Railway
 
 ---
 
@@ -156,7 +173,7 @@ The `GET /api/transactions` endpoint supports the following query parameters:
 | `category` | string | `food` | Filter by category |
 | `startDate` | date | `2026-03-01` | Filter from this date |
 | `endDate` | date | `2026-03-31` | Filter until this date |
-| `page` | number | `1` | Page number (default: 1) |
+| `page` | number | `1` | Page number (default: 10) |
 | `limit` | number | `10` | Results per page (default: 10) |
 
 Example:
